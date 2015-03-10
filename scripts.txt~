@@ -1,0 +1,19 @@
+MEMBER:
+
+rails g scaffold member idnumber:string lastname:string firstname:string middleinitial:string nickname:string year:integer course:string phone:string email:string address:text birthday:date emergency_person:string emergency_phone:string fb_url:string member_status:string member_type:string points:integer
+
+EVENT:
+
+rails g scaffold event eventid:string name:string venue:text schedule:datetime type:string
+
+CHAPTER:
+
+rails g scaffold chapter chapterid:string name:string head:string
+
+COMMITTEE:
+
+rails g scaffold committee commid:string name:string description:text head:string membercount:integer
+
+
+
+

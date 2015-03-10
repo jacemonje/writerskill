@@ -1,0 +1,19 @@
+Writerskill app for MIS121-122
+
+
+Done:
+ ✓ Added and configured devise for members
+ ✓ Fixed create member form
+
+Not yet done:
+  -UI
+  -admin account
+  -Event scaffold
+  -uniqueness
+  -validation
+  -upload functionality via carrierwave
+  -postgresql
+  -responsive design
+  -default 0 points on creation
+  -fields for business rules
+  -email already taken

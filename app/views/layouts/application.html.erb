@@ -7,11 +7,34 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <br>
+
+<center>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+</center>
+
+
+  <div align = "right">
+
+    <% if member_signed_in? %>
+
+     <%= link_to('Dashboard', :controller => "dashboard", :action => "index") %>
+     <%= link_to('Events', :controller => "events", :action => "index") %>
+     Work
+     <%= link_to('Logout', destroy_member_session_path, :method => :delete) %>
+
+
+  <% else %>
+
+    <%= link_to('Login', new_member_session_path)  %>
+
+  <% end %>
+
+  </div>
 
 
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
 
 <%= yield %>
 
@@ -19,15 +42,13 @@
 
 
 <footer>
-  <% if member_signed_in? %>
+  <br>
 
-  <%= link_to('Logout', destroy_member_session_path, :method => :delete) %>
-
-<% else %>
-
-  <%= link_to('Login', new_member_session_path)  %>
-
-<% end %>
+    <center>
+    Writerskill Member System, All Rights Reserved or Whatever
+  </center>
 
 </footer>
+
+
 </html>

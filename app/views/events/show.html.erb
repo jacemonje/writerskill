@@ -1,11 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Eventid:</strong>
-  <%= @event.eventid %>
-</p>
-
-<p>
   <strong>Name:</strong>
   <%= @event.name %>
 </p>
@@ -36,10 +31,7 @@
   <%= @event.attendance %>
 </p>
 
-<p>
-  <strong>Addpoint:</strong>
-  <%= @event.addpoint %>
-</p>
-
 <%= link_to 'Edit', edit_event_path(@event) %> |
+
+
 <%= link_to 'Back', events_path %>

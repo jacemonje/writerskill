@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150310163230) do
+ActiveRecord::Schema.define(version: 20150311164139) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -52,11 +52,11 @@ ActiveRecord::Schema.define(version: 20150310163230) do
     t.text     "venue"
     t.datetime "schedule"
     t.string   "eventclass"
-    t.integer  "attendance"
-    t.string   "addpoint"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.string   "organized_by"
+    t.integer  "attendance",   default: 0
+    t.integer  "addpoint",     default: 0
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
+    t.string   "organized_by", default: "Writerskill"
   end
 
   create_table "members", force: :cascade do |t|
@@ -73,15 +73,15 @@ ActiveRecord::Schema.define(version: 20150310163230) do
     t.string   "emergency_person"
     t.string   "emergency_phone"
     t.string   "fb_url"
-    t.string   "member_status"
-    t.string   "member_type"
-    t.integer  "points"
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "member_status",          default: "Accepted"
+    t.string   "member_type",            default: "Regular"
+    t.integer  "points",                 default: 0
+    t.string   "email",                  default: "",         null: false
+    t.string   "encrypted_password",     default: "",         null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,          null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"

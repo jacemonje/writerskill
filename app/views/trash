@@ -25,3 +25,21 @@
 <%= link_to i.name, i %>
 <br>
 <% end %>
+
+
+#create/sign up
+
+<div class="field">
+  <%= f.label :member_status %><br />
+  <%= f.text_field :member_status, autofocus: true %>
+</div>
+
+<div class="field">
+  <%= f.label :member_type %><br />
+  <%= f.text_field :member_type, autofocus: true %>
+</div>
+
+<div class="field">
+  <%= f.label :points %><br />
+  <%= f.text_field :points, autofocus: true %>
+</div>

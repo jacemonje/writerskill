@@ -1,26 +1,32 @@
+<center>
 <h2>Sign up for the WriterSkill System</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :idnumber %><br />
+    <%= f.label :ID_Number %><br />
     <%= f.text_field :idnumber, autofocus: true %>
   </div>
 
   <div class="field">
-    <%= f.label :firstname %><br />
+    <%= f.label :first_name %><br />
     <%= f.text_field :firstname, autofocus: true %>
   </div>
 
   <div class="field">
-    <%= f.label :middleinitial %><br />
+    <%= f.label :middle_initial %><br />
     <%= f.text_field :middleinitial, autofocus: true %>
   </div>
 
   <div class="field">
-    <%= f.label :lastname %><br />
+    <%= f.label :last_name %><br />
     <%= f.text_field :lastname, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nick_name %><br />
+    <%= f.text_field :nickname, autofocus: true %>
   </div>
 
   <div class="field">
@@ -64,21 +70,6 @@
   </div>
 
   <div class="field">
-    <%= f.label :member_status %><br />
-    <%= f.text_field :member_status, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :member_type %><br />
-    <%= f.text_field :member_type, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :points %><br />
-    <%= f.text_field :points, autofocus: true %>
-  </div>
-
-  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
@@ -102,3 +93,4 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+</center>

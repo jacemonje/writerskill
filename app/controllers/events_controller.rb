@@ -1,15 +1,29 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
-  def register
-
-  end
-
   def index
     @events = Event.all
   end
 
   def show
+    @event = Event.find(params[:id])
+  end
+
+  def attend
+    #if member exists
+    #event attendance + 1
+    #member points + event.addpoint
+    @event = Event.find(params[:id])
+
+    #if member.exists?
+      @event.attendance = @event.attendance + 1
+      @event.save!
+      redirect_to events_path
+    #else
+
+    #end
+
+
   end
 
   def new

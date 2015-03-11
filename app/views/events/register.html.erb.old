@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<center>
+
+<p>
+
+  <b> <%= @event.name %> </b>  by <b> <%= @event.organized_by %> </b>
+
+  <br>
+
+  <b> <%= @event.venue %></b> on </b><%= @event.schedule %></b>
+
+  <br>
+
+  <b><%= @event.eventclass %></b>
+
+  <br>
+
+  Attendance: <b><%= @event.attendance %></b>
+
+  <br>
+  <%= link_to 'Register', :controller => 'events', :action => 'attend' %>
+
+
+  <br>
+
+  <%=  %>
+
+</p>
+
+</center>
+
+
+<%= form_for(@event) do |f| %>
+  <% if @event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+      <% @event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :attendance %><br>
+    <%= f.number_field :attendance %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

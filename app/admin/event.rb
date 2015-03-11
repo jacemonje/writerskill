@@ -1,6 +1,9 @@
 ActiveAdmin.register Event do
   permit_params :eventid, :name, :organized_by, :venue, :schedule, :eventclass, :attendance, :addpoint
 
+  def get_attendance
+      return attendance
+  end
 
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters

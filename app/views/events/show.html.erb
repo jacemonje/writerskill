@@ -18,7 +18,19 @@
 
   Attendance: <b><%= @event.attendance %></b>
 
-  <br>
+
+  <div>
+
+    ID Number
+    <br>
+    Email
+
+    <br>
+    <%= button_to 'Register', :controller => "events", :action => "attend" %>
+    <br>
+
+  </div>
+
 
 </p>
 

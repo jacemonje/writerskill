@@ -1,24 +1,14 @@
-<h1>Writerskill System</h1>
+<center>
+<h1>Writerskill Member Tracker and Events Management System</h1>
+
 
 <b>Last 3 members who have logged in!</b>
 
 <br>
 <% @users.each do |i| %>
-<%= i.firstname %> <%= i.lastname %> 
+<%= i.firstname %> <%= i.lastname %>
 <br>
 <% end %>
-
-<br>
-<br>
-
-<b>Recent events:</b>
-<br>
-
-<% @events.each do |i| %>
-<%= link_to i.name, i %>
-<br>
-<% end %>
-
 
 <br>
 <br>
@@ -52,3 +42,5 @@
   <% end %>
 
 </div>
+
+</center>

@@ -1,39 +1,47 @@
+
+
+<center>
 <h1>Writerskill Member Dashboard</h1>
+</center>
 <p>
 
-  <%= @message %>
-
   <br>
 
-  Hi, <%= current_member.firstname %> <%= current_member.middleinitial %> <%= current_member.lastname %>
+  <center>
+
+  Hi, <b> <%= current_member.firstname %> <%= current_member.middleinitial %> <%= current_member.lastname %> </b>
   <br>
-  You have <%= current_member.points %> points.
+  You have <b> <%= current_member.points %> </b> points.
+
+
 
   <div>
-    Your email is <%= current_member.email %>
+    Your email is <b> <%= current_member.email %> </b>
     <br>
-    Your birthday is <%= current_member.birthday %>
+    Your birthday is <b> <%= current_member.birthday %> </b>
     <br>
-    You live in <%= current_member.address %>
+    You live in <b> <%= current_member.address %> </b>
   </div>
 
   <div>
-    Your ID Number is <%= current_member.idnumber %>
+    Your ID Number is <b> <%= current_member.idnumber %> </b>
     <br>
-    You are <%= current_member.year %> <%= current_member.course %>
+    You are <b> <%= current_member.year %> <%= current_member.course %> </b>
 
   </div>
 
   <br>
 
-<div>
+  <div>
 
-  Emergency Details:
-  <br>
-  <%= current_member.emergency_person %>
-  <br>
-  <%= current_member.emergency_phone %>
+    Emergency Details:
+    <br><b>
+    <%= current_member.emergency_person %>
+    <br>
+    <%= current_member.emergency_phone %>
+  </b>
+  </div>
 
-</div>
+</center>
 
 </p>

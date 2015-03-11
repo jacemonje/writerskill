@@ -1,0 +1,27 @@
+<%= link_to('Home', :controller => "home", :action => "index") %>
+
+
+
+#events
+
+<%=  link_to 'Edit', edit_event_path(@event) %> |
+
+<%=  link_to 'Back', events_path %>
+
+<%= link_to 'New Event', new_event_path %>
+
+<td><%= link_to 'Edit', edit_event_path(event) %></td>
+<td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+
+
+
+#index
+
+<b>Recent events:</b>
+<br>
+
+<% @events.each do |i| %>
+<%= link_to i.name, i %>
+<br>
+<% end %>

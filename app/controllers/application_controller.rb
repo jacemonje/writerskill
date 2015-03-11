@@ -20,6 +20,7 @@ class ApplicationController < ActionController::Base
         devise_parameter_sanitizer.for(:sign_up) << :course
         devise_parameter_sanitizer.for(:sign_up) << :phone
         devise_parameter_sanitizer.for(:sign_up) << :email
+        
         devise_parameter_sanitizer.for(:sign_up) << :address
         devise_parameter_sanitizer.for(:sign_up) << :birthday
         devise_parameter_sanitizer.for(:sign_up) << :emergency_person

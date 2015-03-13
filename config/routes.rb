@@ -10,8 +10,8 @@ Rails.application.routes.draw do
 
   get 'members' => 'dashboard#index'
 
-  post 'events/:id/' => 'events#attend'
-  #get 'members/sign_up' => 'members#create'
+  post 'events/:id/' => 'events#attend' , :as => :attend
+
 
   get 'home/index'
   root 'home#index'

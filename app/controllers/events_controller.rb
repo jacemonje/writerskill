@@ -9,19 +9,27 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
   end
 
+
+
   def attend
-    #if member exists
-    #event attendance + 1
-    #member points + event.addpoint
     @event = Event.find(params[:id])
 
-    #if member.exists?
+
+    @idnumber = params[:login_params][:idnumber]
+    @email = params[:login_params][:email]
+
+
+    @member = Member.where(:idnumber => @idnumber, :email => @email ).first
+
+
+    if @member.nil?
+      redirect_to event_path
+      #show alert that member does not exist
+    else
       @event.attendance = @event.attendance + 1
       @event.save!
-      redirect_to events_path
-    #else
-
-    #end
+      redirect_to event_path
+    end
 
 
   end

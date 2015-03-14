@@ -15,6 +15,7 @@
 
 <%=  button_to 'Register', :controller => "events", :action => "attend" %>
 
+<%= render "devise/shared/links" %>
 
 
 #this for consultation

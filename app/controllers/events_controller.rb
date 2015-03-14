@@ -12,24 +12,44 @@ class EventsController < ApplicationController
 
 
   def attend
+
     @event = Event.find(params[:id])
 
+     if member_signed_in?
+       #before_action :authenticate_member!
 
-    @idnumber = params[:login_params][:idnumber]
-    @email = params[:login_params][:email]
+       @event.attendance = @event.attendance + 1
+       @event.save!
+
+       current_member.points = current_member.points + @event.addpoint
+       current_member.save!
+       redirect_to event_path
+
+     else
+
+       @idnumber = params[:login_params][:idnumber]
+       @email = params[:login_params][:email]
 
 
-    @member = Member.where(:idnumber => @idnumber, :email => @email ).first
+       @member = Member.where(:idnumber => @idnumber, :email => @email ).first
 
 
-    if @member.nil?
-      redirect_to event_path
-      #show alert that member does not exist
-    else
-      @event.attendance = @event.attendance + 1
-      @event.save!
-      redirect_to event_path
-    end
+       if @member.nil?
+         redirect_to event_path
+         #show alert that member does not exist
+       else
+         @event.attendance = @event.attendance + 1
+         @event.save!
+
+         @member.points = @member.points + @event.addpoint
+         @member.save!
+         redirect_to event_path
+       end
+
+     end
+
+
+
 
 
   end

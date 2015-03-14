@@ -21,14 +21,18 @@
 
   <div>
 
+    <% if member_signed_in? %>
+      <%=  button_to 'Register', :controller => "events", :action => "attend" %>
+    <% else %>
 
-    <%= form_for(:login_params, url: attend_path) do |f| %>
+      <%= form_for(:login_params, url: attend_path) do |f| %>
 
-      <%= f.text_field :idnumber %>
-      <%= f.text_field :email %>
-      <br>
-      <%= f.submit 'Register' %>
+        <%= f.text_field :idnumber %>
+        <%= f.text_field :email %>
+        <br>
+        <%= f.submit 'Register' %>
 
+      <% end %>
     <% end %>
 
 

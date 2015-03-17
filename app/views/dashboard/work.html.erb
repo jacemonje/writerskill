@@ -1,0 +1,21 @@
+
+
+<%= form_for(current_member) do |f| %>
+  <div class="field">
+    <%= f.label :work %><br>
+    <%= f.file_field :work %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+
+<%= form_for(@member) do |f| %>
+  <div class="field">
+    <%= f.label :work %><br>
+    <%= f.file_field :work %>
+  </div>
+  <div class="actions">
+    <%= f.submit :Upload %>
+  </div>

@@ -8,9 +8,13 @@ Rails.application.routes.draw do
   get 'dashboard/index'
   get 'dashboard/' => 'dashboard#index'
 
+
   get 'members' => 'dashboard#index'
 
   post 'events/:id/' => 'events#attend' , :as => :attend
+
+  post 'dashboard/index' => 'dashboard#submit', :as => :submit
+
 
 
   get 'home/index'

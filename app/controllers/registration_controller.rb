@@ -20,7 +20,8 @@ def sign_up_params
   :member_type,
   :points:
   :password,
-  :password_confirmation)
+  :password_confirmation
+  :work)
 end
 
 def account_update_params

@@ -41,9 +41,9 @@ gem 'cancan'
 #gem 'inherited_resources'
 #gem 'formtastic'
 
-
+gem 'carrierwave'
 
 gem 'activeadmin',         github: 'gregbell/active_admin'
-gem 'ransack',             github: 'ernie/ransack'    
+gem 'ransack',             github: 'ernie/ransack'
 gem 'inherited_resources', github: 'josevalim/inherited_resources'
 gem 'formtastic',          github: 'justinfrench/formtastic'

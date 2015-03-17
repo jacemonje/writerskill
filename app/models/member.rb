@@ -6,4 +6,5 @@ class Member < ActiveRecord::Base
 
   has_many :events
 
+  mount_uploader :work, WorkUploader
 end

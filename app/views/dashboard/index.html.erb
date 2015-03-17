@@ -42,6 +42,35 @@
   </b>
   </div>
 
+
+  <div>
+
+
+    <%= form_for(:work, url: submit_path) do |f| %>
+      Upload your work:<br>
+      <%= f.file_field :work %>
+      <br>
+      <%= f.submit 'Upload' %>
+
+    <% end %>
+
+
+
+
+
+  </div>
+
+  <br>
+
+  <div>
+    Uploaded Works:
+    <br>
+    <%= current_member.work %>
+  </div>
+
+
+
+
 </center>
 
 </p>

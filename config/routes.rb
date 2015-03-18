@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   post 'events/:id/' => 'events#attend' , :as => :attend
 
-  post 'dashboard/index' => 'dashboard#submit', :as => :submit
+  #post 'dashboard/index' => 'dashboard#submit', :as => :submit
 
 
 

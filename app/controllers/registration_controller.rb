@@ -46,7 +46,8 @@ def account_update_params
   :points:
   :password,
   :password_confirmation,
-  :current_password)
+  :current_password
+  :work)
 
   #params.require(:member).permit(:idnumber, :firstname, :email, :password, :password_confirmation, :current_password)
 end

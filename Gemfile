@@ -42,6 +42,7 @@ gem 'cancan'
 #gem 'formtastic'
 
 gem 'carrierwave'
+gem 'wicked_pdf'
 
 gem 'activeadmin',         github: 'gregbell/active_admin'
 gem 'ransack',             github: 'ernie/ransack'

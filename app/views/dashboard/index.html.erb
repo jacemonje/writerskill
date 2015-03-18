@@ -1,5 +1,3 @@
-
-
 <center>
 <h1>Writerskill Member Dashboard</h1>
 </center>
@@ -31,44 +29,41 @@
   </div>
 
   <br>
+  <br>
 
   <div>
 
-    Emergency Details:
-    <br><b>
+    <b>Emergency Details:</b>
+    <br>
     <%= current_member.emergency_person %>
     <br>
     <%= current_member.emergency_phone %>
-  </b>
-  </div>
-
-
-  <div>
-
-
-    <%= form_for(:work, url: submit_path) do |f| %>
-      Upload your work:<br>
-      <%= f.file_field :work %>
-      <br>
-      <%= f.submit 'Upload' %>
-
-    <% end %>
-
-
-
-
 
   </div>
 
   <br>
+  <br>
+
+
+
+
+
+
+  <br>
 
   <div>
-    Uploaded Works:
+    <b>Uploaded Works:</b>
     <br>
-    <%= current_member.work %>
+    <%= link_to current_member.work.url, current_member.work.url  %>
   </div>
+<br>
+  <div>
+    <b>Events attended:</b>
+    <br>
 
 
+
+  </div>
 
 
 </center>

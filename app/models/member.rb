@@ -6,5 +6,6 @@ class Member < ActiveRecord::Base
 
   has_many :events
 
+  #attr_accessible :work
   mount_uploader :work, WorkUploader
 end

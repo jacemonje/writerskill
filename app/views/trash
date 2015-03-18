@@ -55,3 +55,18 @@
   <%= f.label :points %><br />
   <%= f.text_field :points, autofocus: true %>
 </div>
+
+
+
+
+#submit index dash
+<div>
+
+  <%= form_for(:work, url: submit_path) do |f| %>
+  <b>Upload your work:<b><br>
+    <%= f.file_field :work %>
+    <br>
+    <%= f.submit 'Upload' %>
+
+  <% end %>
+</div>

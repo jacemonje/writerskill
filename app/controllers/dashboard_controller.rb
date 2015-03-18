@@ -7,12 +7,12 @@ class DashboardController < ApplicationController
   end
 
   def submit
-    @id = current_member.idnumber
+    #@id = current_member.idnumber
 
     #find current member
-    @member = Member.where(:idnumber => @id)
+    #@member = Member.where(:idnumber => @id)
 
-    render "index"
+    #render "index"
   end
 
 end

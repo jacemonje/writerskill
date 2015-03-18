@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
         devise_parameter_sanitizer.for(:sign_up) << :course
         devise_parameter_sanitizer.for(:sign_up) << :phone
         devise_parameter_sanitizer.for(:sign_up) << :email
-        
+
         devise_parameter_sanitizer.for(:sign_up) << :address
         devise_parameter_sanitizer.for(:sign_up) << :birthday
         devise_parameter_sanitizer.for(:sign_up) << :emergency_person
@@ -29,6 +29,8 @@ class ApplicationController < ActionController::Base
         devise_parameter_sanitizer.for(:sign_up) << :member_status
         devise_parameter_sanitizer.for(:sign_up) << :member_type
         devise_parameter_sanitizer.for(:sign_up) << :points
+
+        devise_parameter_sanitizer.for(:sign_up) << :work
 
         #devise_parameter_sanitizer.for(:account_update) {
         #  |u| u.permit(:idnumber, :firstname:, :email, :password, :current_password)

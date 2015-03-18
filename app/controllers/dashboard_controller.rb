@@ -6,13 +6,23 @@ class DashboardController < ApplicationController
     @message = "Welcome to your dashboard!"
   end
 
+  def edit
+    @member = current_member
+  end
+
   def submit
-    #@id = current_member.idnumber
 
-    #find current member
-    #@member = Member.where(:idnumber => @id)
+    #@member = Member.find(current_member.id)
+    @member = current_member
 
-    #render "index"
+    @work = params[:work]
+
+    @member.work = @work
+
+    @member.save!
+
+    redirect_to root_path
+
   end
 
 end

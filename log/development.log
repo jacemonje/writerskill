@@ -67595,3 +67595,2242 @@ Started GET "/assets/registration-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" fo
 
 
 Started GET "/assets/application-187266367c7381d7125ca456b6c7e451.js?body=1" for 127.0.0.1 at 2015-03-18 21:56:58 +0800
+
+
+Started GET "/members/edit" for 127.0.0.1 at 2015-03-18 22:01:05 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mMember Load (0.2ms)[0m  SELECT  "members".* FROM "members" WHERE "members"."id" = ?  ORDER BY "members"."id" ASC LIMIT 1  [["id", 12]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (15.7ms)
+Completed 500 Internal Server Error in 387ms
+
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"devise/dashboard"}):
+    19: 
+    20:     <% if member_signed_in? %>
+    21: 
+    22:      <%= link_to('Dashboard', :controller => "dashboard", :action => "index") %>
+    23:      <%= link_to('Events', :controller => "events", :action => "index") %>
+    24:      <%= link_to('Logout', destroy_member_session_path, :method => :delete) %>
+    25: 
+  app/views/layouts/application.html.erb:22:in `_app_views_layouts_application_html_erb__921071400785132787_45750580'
+
+
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-18 22:02:28 +0800
+Processing by HomeController#index as HTML
+  [1m[36mMember Load (0.1ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."id" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["id", 12]]
+Redirected to http://localhost:3000/dashboard/index
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2015-03-18 22:02:28 +0800
+Processing by DashboardController#index as HTML
+  [1m[35mMember Load (0.1ms)[0m  SELECT  "members".* FROM "members" WHERE "members"."id" = ?  ORDER BY "members"."id" ASC LIMIT 1  [["id", 12]]
+  Rendered dashboard/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 26ms
+
+SyntaxError (/home/jacemonje/Desktop/writerskill-app/app/views/dashboard/index.html.erb:86: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/jacemonje/Desktop/writerskill-app/app/views/dashboard/index.html.erb:88: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/dashboard/index.html.erb:86: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/dashboard/index.html.erb:88: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.1ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2015-03-18 22:02:46 +0800
+Processing by DashboardController#index as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."id" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["id", 12]]
+  Rendered dashboard/index.html.erb within layouts/application (13.9ms)
+Completed 500 Internal Server Error in 19ms
+
+ActionView::Template::Error (undefined local variable or method `resource' for #<#<Class:0x00000005ba7728>:0x007f186511e408>):
+    46: 
+    47: <div>
+    48:   <b>Upload your work:</b>
+    49:   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    50:   <div class="field">
+    51:     <%= f.label :work %>
+    52:     <%= f.file_field :work %>
+  app/views/dashboard/index.html.erb:49:in `_app_views_dashboard_index_html_erb__3647102192885666637_69871375804660'
+
+
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.4ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2015-03-18 22:06:12 +0800
+Processing by DashboardController#index as HTML
+  [1m[35mMember Load (0.2ms)[0m  SELECT  "members".* FROM "members" WHERE "members"."id" = ?  ORDER BY "members"."id" ASC LIMIT 1  [["id", 12]]
+  Rendered dashboard/index.html.erb within layouts/application (10.7ms)
+Completed 500 Internal Server Error in 57ms
+
+ActionView::Template::Error (undefined local variable or method `resource' for #<#<Class:0x007f1864dc72a0>:0x007f1864ca77d0>):
+    47: <div>
+    48:   
+    49:   <b>Upload your work:</b>
+    50:   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    51:   <div class="field">
+    52:     <%= f.label :work %>
+    53:     <%= f.file_field :work %>
+  app/views/dashboard/index.html.erb:50:in `_app_views_dashboard_index_html_erb__3647102192885666637_69871373464260'
+
+
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.3ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2015-03-18 22:06:27 +0800
+Processing by DashboardController#index as HTML
+  [1m[36mMember Load (0.1ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."id" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["id", 12]]
+  Rendered dashboard/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 4ms
+
+SyntaxError (/home/jacemonje/Desktop/writerskill-app/app/views/dashboard/index.html.erb:76: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/dashboard/index.html.erb:76: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.6ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2015-03-18 22:06:32 +0800
+Processing by DashboardController#index as HTML
+  [1m[35mMember Load (0.1ms)[0m  SELECT  "members".* FROM "members" WHERE "members"."id" = ?  ORDER BY "members"."id" ASC LIMIT 1  [["id", 12]]
+  Rendered dashboard/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 127ms (Views: 126.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/active_admin-b6b01eac090941a7de511b7068801094.css?body=1" for 127.0.0.1 at 2015-03-18 22:06:32 +0800
+
+
+Started GET "/assets/dashboard-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:06:32 +0800
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:06:32 +0800
+
+
+Started GET "/assets/application-23f01bcbdc3f7bb8a1ad86d8aa8acd02.css?body=1" for 127.0.0.1 at 2015-03-18 22:06:33 +0800
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:06:33 +0800
+
+
+Started GET "/assets/scaffolds-87b97982618d435a172b83480c0bdfe8.css?body=1" for 127.0.0.1 at 2015-03-18 22:06:33 +0800
+
+
+Started GET "/assets/registration-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:06:33 +0800
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-18 22:06:33 +0800
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-18 22:06:33 +0800
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-18 22:06:33 +0800
+
+
+Started GET "/assets/jquery-ui/core-f6c29219d44f4267c6c5f748cb73851a.js?body=1" for 127.0.0.1 at 2015-03-18 22:06:33 +0800
+
+
+Started GET "/assets/jquery-ui/datepicker-28441b2cd45f0545c8a439f40b98d784.js?body=1" for 127.0.0.1 at 2015-03-18 22:06:33 +0800
+
+
+Started GET "/assets/jquery-ui/widget-406fc24d615dd4370e049e85fb5f549d.js?body=1" for 127.0.0.1 at 2015-03-18 22:06:33 +0800
+
+
+Started GET "/assets/jquery-ui/button-a8037a4250da171316b7e7521b0d9d0b.js?body=1" for 127.0.0.1 at 2015-03-18 22:06:33 +0800
+
+
+Started GET "/assets/jquery-ui/mouse-504ef967eca0eb03967e3c9751c36d17.js?body=1" for 127.0.0.1 at 2015-03-18 22:06:33 +0800
+
+
+Started GET "/assets/jquery-ui/draggable-d158b51e489137b213fd1eaa96a9b92a.js?body=1" for 127.0.0.1 at 2015-03-18 22:06:33 +0800
+
+
+Started GET "/assets/jquery-ui/position-65ef6bd55aa64766623cc74b5d7d353d.js?body=1" for 127.0.0.1 at 2015-03-18 22:06:33 +0800
+
+
+Started GET "/assets/jquery-ui/resizable-aa565fd6aa9f42700d8c54b318c0c1c8.js?body=1" for 127.0.0.1 at 2015-03-18 22:06:33 +0800
+
+
+Started GET "/assets/jquery-ui/dialog-ee62065c80cb02fe6e91bf5811c59c91.js?body=1" for 127.0.0.1 at 2015-03-18 22:06:33 +0800
+
+
+Started GET "/assets/jquery-ui/sortable-fe96bfa9ff14377c0dc83b42d0f191e4.js?body=1" for 127.0.0.1 at 2015-03-18 22:06:33 +0800
+
+
+Started GET "/assets/jquery-ui/tabs-7d723642f0cea4ad8b4be12b7af40214.js?body=1" for 127.0.0.1 at 2015-03-18 22:06:33 +0800
+
+
+Started GET "/assets/active_admin/base-73f24d8653d67794d4eb7ac3c8266e3b.js?body=1" for 127.0.0.1 at 2015-03-18 22:06:33 +0800
+
+
+Started GET "/assets/active_admin/lib/batch_actions-5706928449a7d192adcb4c959b623cf6.js?body=1" for 127.0.0.1 at 2015-03-18 22:06:33 +0800
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler-71efe70af420ba0aef07b4e19fc2fc06.js?body=1" for 127.0.0.1 at 2015-03-18 22:06:33 +0800
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu-0d4c387b749f3fc1d71179e523ab4e49.js?body=1" for 127.0.0.1 at 2015-03-18 22:06:33 +0800
+
+
+Started GET "/assets/active_admin/lib/flash-a3dc1386603709c2a6501741817b1ca8.js?body=1" for 127.0.0.1 at 2015-03-18 22:06:33 +0800
+
+
+Started GET "/assets/active_admin/lib/has_many-64f8975fc252419139c3a62d16c53777.js?body=1" for 127.0.0.1 at 2015-03-18 22:06:33 +0800
+
+
+Started GET "/assets/active_admin/lib/modal_dialog-400dfa6502091f82a5e3941b8a771c46.js?body=1" for 127.0.0.1 at 2015-03-18 22:06:33 +0800
+
+
+Started GET "/assets/active_admin/lib/per_page-239488a1a0b13f3cda3dddf002b6ed21.js?body=1" for 127.0.0.1 at 2015-03-18 22:06:33 +0800
+
+
+Started GET "/assets/active_admin/lib/popover-4659964ef0ff6b1465b40769d440f87a.js?body=1" for 127.0.0.1 at 2015-03-18 22:06:33 +0800
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler-18530342f84893188506c0a48a10be15.js?body=1" for 127.0.0.1 at 2015-03-18 22:06:33 +0800
+
+
+Started GET "/assets/active_admin/ext/jquery-ui-5963f9f0bd7887f07217b87c96e27f88.js?body=1" for 127.0.0.1 at 2015-03-18 22:06:33 +0800
+
+
+Started GET "/assets/active_admin/ext/jquery-22727936bd5e807603d51c2a59b45b7d.js?body=1" for 127.0.0.1 at 2015-03-18 22:06:33 +0800
+
+
+Started GET "/assets/active_admin/application-eb8a267ef17a17c127e0278b098e46d5.js?body=1" for 127.0.0.1 at 2015-03-18 22:06:33 +0800
+
+
+Started GET "/assets/active_admin-835293ec52ff33915328aca69e191403.js?body=1" for 127.0.0.1 at 2015-03-18 22:06:33 +0800
+
+
+Started GET "/assets/dashboard-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:06:33 +0800
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:06:33 +0800
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:06:33 +0800
+
+
+Started GET "/assets/application-187266367c7381d7125ca456b6c7e451.js?body=1" for 127.0.0.1 at 2015-03-18 22:06:33 +0800
+
+
+Started GET "/assets/registration-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:06:33 +0800
+
+
+Started GET "/members/edit" for 127.0.0.1 at 2015-03-18 22:06:40 +0800
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mMember Load (0.1ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."id" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["id", 12]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 144ms
+
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"devise/dashboard"}):
+    19: 
+    20:     <% if member_signed_in? %>
+    21: 
+    22:      <%= link_to('Dashboard', :controller => "dashboard", :action => "index") %>
+    23:      <%= link_to('Events', :controller => "events", :action => "index") %>
+    24:      <%= link_to('Logout', destroy_member_session_path, :method => :delete) %>
+    25: 
+  app/views/layouts/application.html.erb:22:in `_app_views_layouts_application_html_erb__921071400785132787_45750580'
+
+
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.9ms)
+
+
+Started GET "/members/edit" for 127.0.0.1 at 2015-03-18 22:13:55 +0800
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mMember Load (0.2ms)[0m  SELECT  "members".* FROM "members" WHERE "members"."id" = ?  ORDER BY "members"."id" ASC LIMIT 1  [["id", 12]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (8.4ms)
+Completed 500 Internal Server Error in 194ms
+
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"devise/dashboard"}):
+    19: 
+    20:     <% if member_signed_in? %>
+    21: 
+    22:      <%= link_to('Dashboard', :controller => "dashboard", :action => "index") %>
+    23:      <%= link_to('Events', :controller => "events", :action => "index") %>
+    24:      <%= link_to('Logout', destroy_member_session_path, :method => :delete) %>
+    25: 
+  app/views/layouts/application.html.erb:22:in `_app_views_layouts_application_html_erb__921071400785132787_45750580'
+
+
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-18 22:24:06 +0800
+
+SyntaxError (/home/jacemonje/Desktop/writerskill-app/config/routes.rb:15: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  post 'dashboard/index' as => 'dashboard#submit', :as => :submit
+                           ^
+/home/jacemonje/Desktop/writerskill-app/config/routes.rb:15: syntax error, unexpected ',', expecting keyword_end
+  post 'dashboard/index' as => 'dashboard#submit', :as => :submit
+                                                  ^):
+  config/routes.rb:15: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  config/routes.rb:15: syntax error, unexpected ',', expecting keyword_end
+
+
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.2ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (14.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-18 22:24:08 +0800
+
+SyntaxError (/home/jacemonje/Desktop/writerskill-app/config/routes.rb:15: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  post 'dashboard/index' as => 'dashboard#submit', :as => :submit
+                           ^
+/home/jacemonje/Desktop/writerskill-app/config/routes.rb:15: syntax error, unexpected ',', expecting keyword_end
+  post 'dashboard/index' as => 'dashboard#submit', :as => :submit
+                                                  ^):
+  config/routes.rb:15: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  config/routes.rb:15: syntax error, unexpected ',', expecting keyword_end
+
+
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.1ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (14.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-18 22:24:27 +0800
+Processing by HomeController#index as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."id" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["id", 12]]
+Redirected to http://localhost:3000/dashboard/index
+Completed 302 Found in 14ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2015-03-18 22:24:27 +0800
+Processing by DashboardController#index as HTML
+  [1m[35mMember Load (0.2ms)[0m  SELECT  "members".* FROM "members" WHERE "members"."id" = ?  ORDER BY "members"."id" ASC LIMIT 1  [["id", 12]]
+  Rendered dashboard/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 41ms
+
+SyntaxError (/home/jacemonje/Desktop/writerskill-app/app/views/dashboard/index.html.erb:77: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/jacemonje/Desktop/writerskill-app/app/views/dashboard/index.html.erb:79: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/dashboard/index.html.erb:77: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/dashboard/index.html.erb:79: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-18 22:24:30 +0800
+Processing by HomeController#index as HTML
+  [1m[36mMember Load (0.1ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."id" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["id", 12]]
+Redirected to http://localhost:3000/dashboard/index
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2015-03-18 22:24:30 +0800
+Processing by DashboardController#index as HTML
+  [1m[35mMember Load (0.1ms)[0m  SELECT  "members".* FROM "members" WHERE "members"."id" = ?  ORDER BY "members"."id" ASC LIMIT 1  [["id", 12]]
+  Rendered dashboard/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 4ms
+
+SyntaxError (/home/jacemonje/Desktop/writerskill-app/app/views/dashboard/index.html.erb:77: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/jacemonje/Desktop/writerskill-app/app/views/dashboard/index.html.erb:79: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/dashboard/index.html.erb:77: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/dashboard/index.html.erb:79: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.1ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2015-03-18 22:24:47 +0800
+Processing by DashboardController#index as HTML
+  [1m[36mMember Load (0.1ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."id" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["id", 12]]
+  Rendered dashboard/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 4ms
+
+SyntaxError (/home/jacemonje/Desktop/writerskill-app/app/views/dashboard/index.html.erb:75: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/jacemonje/Desktop/writerskill-app/app/views/dashboard/index.html.erb:77: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/dashboard/index.html.erb:75: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/dashboard/index.html.erb:77: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.8ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2015-03-18 22:25:01 +0800
+Processing by DashboardController#index as HTML
+  [1m[35mMember Load (0.1ms)[0m  SELECT  "members".* FROM "members" WHERE "members"."id" = ?  ORDER BY "members"."id" ASC LIMIT 1  [["id", 12]]
+  Rendered dashboard/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 119ms (Views: 117.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/dashboard-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:25:01 +0800
+
+
+Started GET "/assets/active_admin-b6b01eac090941a7de511b7068801094.css?body=1" for 127.0.0.1 at 2015-03-18 22:25:01 +0800
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:25:01 +0800
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:25:01 +0800
+
+
+Started GET "/assets/scaffolds-87b97982618d435a172b83480c0bdfe8.css?body=1" for 127.0.0.1 at 2015-03-18 22:25:01 +0800
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:01 +0800
+
+
+Started GET "/assets/application-23f01bcbdc3f7bb8a1ad86d8aa8acd02.css?body=1" for 127.0.0.1 at 2015-03-18 22:25:01 +0800
+
+
+Started GET "/assets/registration-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:25:01 +0800
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:01 +0800
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:01 +0800
+
+
+Started GET "/assets/jquery-ui/core-f6c29219d44f4267c6c5f748cb73851a.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:01 +0800
+
+
+Started GET "/assets/jquery-ui/datepicker-28441b2cd45f0545c8a439f40b98d784.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:01 +0800
+
+
+Started GET "/assets/jquery-ui/widget-406fc24d615dd4370e049e85fb5f549d.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:01 +0800
+
+
+Started GET "/assets/jquery-ui/button-a8037a4250da171316b7e7521b0d9d0b.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:01 +0800
+
+
+Started GET "/assets/jquery-ui/mouse-504ef967eca0eb03967e3c9751c36d17.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:01 +0800
+
+
+Started GET "/assets/jquery-ui/draggable-d158b51e489137b213fd1eaa96a9b92a.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:02 +0800
+
+
+Started GET "/assets/jquery-ui/position-65ef6bd55aa64766623cc74b5d7d353d.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:02 +0800
+
+
+Started GET "/assets/jquery-ui/resizable-aa565fd6aa9f42700d8c54b318c0c1c8.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:02 +0800
+
+
+Started GET "/assets/jquery-ui/dialog-ee62065c80cb02fe6e91bf5811c59c91.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:02 +0800
+
+
+Started GET "/assets/jquery-ui/tabs-7d723642f0cea4ad8b4be12b7af40214.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:02 +0800
+
+
+Started GET "/assets/jquery-ui/sortable-fe96bfa9ff14377c0dc83b42d0f191e4.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:02 +0800
+
+
+Started GET "/assets/active_admin/base-73f24d8653d67794d4eb7ac3c8266e3b.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:02 +0800
+
+
+Started GET "/assets/active_admin/lib/batch_actions-5706928449a7d192adcb4c959b623cf6.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:02 +0800
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler-71efe70af420ba0aef07b4e19fc2fc06.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:02 +0800
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu-0d4c387b749f3fc1d71179e523ab4e49.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:02 +0800
+
+
+Started GET "/assets/active_admin/lib/flash-a3dc1386603709c2a6501741817b1ca8.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:02 +0800
+
+
+Started GET "/assets/active_admin/lib/has_many-64f8975fc252419139c3a62d16c53777.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:02 +0800
+
+
+Started GET "/assets/active_admin/lib/per_page-239488a1a0b13f3cda3dddf002b6ed21.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:02 +0800
+
+
+Started GET "/assets/active_admin/lib/modal_dialog-400dfa6502091f82a5e3941b8a771c46.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:02 +0800
+
+
+Started GET "/assets/active_admin/lib/popover-4659964ef0ff6b1465b40769d440f87a.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:02 +0800
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler-18530342f84893188506c0a48a10be15.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:02 +0800
+
+
+Started GET "/assets/active_admin/ext/jquery-ui-5963f9f0bd7887f07217b87c96e27f88.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:02 +0800
+
+
+Started GET "/assets/active_admin/ext/jquery-22727936bd5e807603d51c2a59b45b7d.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:02 +0800
+
+
+Started GET "/assets/active_admin/application-eb8a267ef17a17c127e0278b098e46d5.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:02 +0800
+
+
+Started GET "/assets/active_admin-835293ec52ff33915328aca69e191403.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:02 +0800
+
+
+Started GET "/assets/dashboard-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:02 +0800
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:02 +0800
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:02 +0800
+
+
+Started GET "/assets/registration-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:02 +0800
+
+
+Started GET "/assets/application-187266367c7381d7125ca456b6c7e451.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:02 +0800
+
+
+Started POST "/dashboard/index" for 127.0.0.1 at 2015-03-18 22:25:09 +0800
+Processing by DashboardController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d6YcxXJK25E2cm7ZwZc1ZqrQ/D/Aiwbk0UxtQacQlLGXCOs4V1sOYfoxZtqtiZVTCHJnrxcUNObuLv5f7wlB1A==", "work"=>{"work"=>#<ActionDispatch::Http::UploadedFile:0x000000065852e0 @tempfile=#<Tempfile:/tmp/RackMultipart20150318-4890-1vyjtdu.pdf>, @original_filename="Barot.BPM.Project.PrimerSY2014-15.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"work[work]\"; filename=\"Barot.BPM.Project.PrimerSY2014-15.pdf\"\r\nContent-Type: application/pdf\r\n">}, "commit"=>"Upload"}
+  [1m[36mMember Load (0.1ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."id" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["id", 12]]
+Completed 500 Internal Server Error in 5ms
+
+NameError (undefined local variable or method `current_user' for #<DashboardController:0x000000065861b8>):
+  app/controllers/dashboard_controller.rb:15:in `submit'
+
+
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.5ms)
+
+
+Started POST "/dashboard/index" for 127.0.0.1 at 2015-03-18 22:25:31 +0800
+Processing by DashboardController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d6YcxXJK25E2cm7ZwZc1ZqrQ/D/Aiwbk0UxtQacQlLGXCOs4V1sOYfoxZtqtiZVTCHJnrxcUNObuLv5f7wlB1A==", "work"=>{"work"=>#<ActionDispatch::Http::UploadedFile:0x00000006a3d788 @tempfile=#<Tempfile:/tmp/RackMultipart20150318-4890-1ssl4hm.pdf>, @original_filename="Barot.BPM.Project.PrimerSY2014-15.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"work[work]\"; filename=\"Barot.BPM.Project.PrimerSY2014-15.pdf\"\r\nContent-Type: application/pdf\r\n">}, "commit"=>"Upload"}
+  [1m[35mMember Load (0.1ms)[0m  SELECT  "members".* FROM "members" WHERE "members"."id" = ?  ORDER BY "members"."id" ASC LIMIT 1  [["id", 12]]
+  [1m[36mMember Load (0.2ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mSQL (0.5ms)[0m  UPDATE "members" SET "work" = ?, "updated_at" = ? WHERE "members"."id" = ?  [["work", "TAL_Apparel_Case.pdf"], ["updated_at", "2015-03-18 14:25:32.143106"], ["id", 12]]
+  [1m[36m (118.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 173ms (ActiveRecord: 120.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+Processing by HomeController#index as HTML
+  [1m[35mMember Load (0.1ms)[0m  SELECT  "members".* FROM "members" WHERE "members"."id" = ?  ORDER BY "members"."id" ASC LIMIT 1  [["id", 12]]
+Redirected to http://localhost:3000/dashboard/index
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+Processing by DashboardController#index as HTML
+  [1m[36mMember Load (0.1ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."id" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["id", 12]]
+  Rendered dashboard/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 144ms (Views: 142.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/active_admin-b6b01eac090941a7de511b7068801094.css?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/dashboard-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/scaffolds-87b97982618d435a172b83480c0bdfe8.css?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/registration-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/application-23f01bcbdc3f7bb8a1ad86d8aa8acd02.css?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/jquery-ui/core-f6c29219d44f4267c6c5f748cb73851a.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/jquery-ui/datepicker-28441b2cd45f0545c8a439f40b98d784.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/jquery-ui/widget-406fc24d615dd4370e049e85fb5f549d.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/jquery-ui/button-a8037a4250da171316b7e7521b0d9d0b.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/jquery-ui/mouse-504ef967eca0eb03967e3c9751c36d17.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/jquery-ui/position-65ef6bd55aa64766623cc74b5d7d353d.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/jquery-ui/draggable-d158b51e489137b213fd1eaa96a9b92a.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/jquery-ui/resizable-aa565fd6aa9f42700d8c54b318c0c1c8.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/jquery-ui/dialog-ee62065c80cb02fe6e91bf5811c59c91.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/jquery-ui/sortable-fe96bfa9ff14377c0dc83b42d0f191e4.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/jquery-ui/tabs-7d723642f0cea4ad8b4be12b7af40214.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/active_admin/base-73f24d8653d67794d4eb7ac3c8266e3b.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/active_admin/lib/batch_actions-5706928449a7d192adcb4c959b623cf6.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler-71efe70af420ba0aef07b4e19fc2fc06.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu-0d4c387b749f3fc1d71179e523ab4e49.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/active_admin/lib/flash-a3dc1386603709c2a6501741817b1ca8.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/active_admin/lib/has_many-64f8975fc252419139c3a62d16c53777.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/active_admin/lib/modal_dialog-400dfa6502091f82a5e3941b8a771c46.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/active_admin/lib/per_page-239488a1a0b13f3cda3dddf002b6ed21.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/active_admin/lib/popover-4659964ef0ff6b1465b40769d440f87a.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler-18530342f84893188506c0a48a10be15.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/active_admin/ext/jquery-ui-5963f9f0bd7887f07217b87c96e27f88.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/active_admin/ext/jquery-22727936bd5e807603d51c2a59b45b7d.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/active_admin/application-eb8a267ef17a17c127e0278b098e46d5.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/dashboard-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/active_admin-835293ec52ff33915328aca69e191403.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/registration-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started GET "/assets/application-187266367c7381d7125ca456b6c7e451.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:32 +0800
+
+
+Started POST "/dashboard/index" for 127.0.0.1 at 2015-03-18 22:25:37 +0800
+Processing by DashboardController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j6zaacrXYWEiX/3JUgBl4+aQpKtRmZj7kWXnY4W0yWpvAi2U78a0ke4c9co+HsXWRDI/O4YGqvmuB3R9za0cDw==", "work"=>{"work"=>#<ActionDispatch::Http::UploadedFile:0x00000002fce458 @tempfile=#<Tempfile:/tmp/RackMultipart20150318-4890-s4cq5g.pdf>, @original_filename="BPM - CVS Leg.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"work[work]\"; filename=\"BPM - CVS Leg.pdf\"\r\nContent-Type: application/pdf\r\n">}, "commit"=>"Upload"}
+  [1m[35mMember Load (0.2ms)[0m  SELECT  "members".* FROM "members" WHERE "members"."id" = ?  ORDER BY "members"."id" ASC LIMIT 1  [["id", 12]]
+  [1m[36mMember Load (0.2ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "members" SET "work" = ?, "updated_at" = ? WHERE "members"."id" = ?  [["work", "TAL_Apparel_Case.pdf"], ["updated_at", "2015-03-18 14:25:37.858013"], ["id", 12]]
+  [1m[36m (135.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 148ms (ActiveRecord: 136.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+Processing by HomeController#index as HTML
+  [1m[35mMember Load (0.1ms)[0m  SELECT  "members".* FROM "members" WHERE "members"."id" = ?  ORDER BY "members"."id" ASC LIMIT 1  [["id", 12]]
+Redirected to http://localhost:3000/dashboard/index
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+Processing by DashboardController#index as HTML
+  [1m[36mMember Load (0.1ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."id" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["id", 12]]
+  Rendered dashboard/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 130ms (Views: 128.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/active_admin-b6b01eac090941a7de511b7068801094.css?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/dashboard-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/registration-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/application-23f01bcbdc3f7bb8a1ad86d8aa8acd02.css?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/scaffolds-87b97982618d435a172b83480c0bdfe8.css?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/jquery-ui/core-f6c29219d44f4267c6c5f748cb73851a.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/jquery-ui/datepicker-28441b2cd45f0545c8a439f40b98d784.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/jquery-ui/widget-406fc24d615dd4370e049e85fb5f549d.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/jquery-ui/button-a8037a4250da171316b7e7521b0d9d0b.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/jquery-ui/mouse-504ef967eca0eb03967e3c9751c36d17.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/jquery-ui/position-65ef6bd55aa64766623cc74b5d7d353d.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/jquery-ui/draggable-d158b51e489137b213fd1eaa96a9b92a.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/jquery-ui/resizable-aa565fd6aa9f42700d8c54b318c0c1c8.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/jquery-ui/sortable-fe96bfa9ff14377c0dc83b42d0f191e4.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/jquery-ui/dialog-ee62065c80cb02fe6e91bf5811c59c91.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/jquery-ui/tabs-7d723642f0cea4ad8b4be12b7af40214.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/active_admin/base-73f24d8653d67794d4eb7ac3c8266e3b.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/active_admin/lib/batch_actions-5706928449a7d192adcb4c959b623cf6.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler-71efe70af420ba0aef07b4e19fc2fc06.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu-0d4c387b749f3fc1d71179e523ab4e49.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/active_admin/lib/flash-a3dc1386603709c2a6501741817b1ca8.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/active_admin/lib/has_many-64f8975fc252419139c3a62d16c53777.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/active_admin/lib/modal_dialog-400dfa6502091f82a5e3941b8a771c46.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/active_admin/lib/per_page-239488a1a0b13f3cda3dddf002b6ed21.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler-18530342f84893188506c0a48a10be15.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/active_admin/ext/jquery-ui-5963f9f0bd7887f07217b87c96e27f88.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/active_admin/lib/popover-4659964ef0ff6b1465b40769d440f87a.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/active_admin/application-eb8a267ef17a17c127e0278b098e46d5.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/active_admin/ext/jquery-22727936bd5e807603d51c2a59b45b7d.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/dashboard-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/active_admin-835293ec52ff33915328aca69e191403.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/registration-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started GET "/assets/application-187266367c7381d7125ca456b6c7e451.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:38 +0800
+
+
+Started POST "/dashboard/index" for 127.0.0.1 at 2015-03-18 22:25:43 +0800
+Processing by DashboardController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ICJBoEK6aUts7MOBvh/VE7k7JB3lk9iEfr21Ui1glzXAjLZdZ6u8u6Cvy4LSAXUmG5m/jTIM6oZB3yZMZXlCUA==", "work"=>{"work"=>#<ActionDispatch::Http::UploadedFile:0x007f18650b9288 @tempfile=#<Tempfile:/tmp/RackMultipart20150318-4890-2jsg27.pdf>, @original_filename="TAL Apparel Case.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"work[work]\"; filename=\"TAL Apparel Case.pdf\"\r\nContent-Type: application/pdf\r\n">}, "commit"=>"Upload"}
+  [1m[35mMember Load (0.1ms)[0m  SELECT  "members".* FROM "members" WHERE "members"."id" = ?  ORDER BY "members"."id" ASC LIMIT 1  [["id", 12]]
+  [1m[36mMember Load (0.1ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mSQL (0.1ms)[0m  UPDATE "members" SET "work" = ?, "updated_at" = ? WHERE "members"."id" = ?  [["work", "TAL_Apparel_Case.pdf"], ["updated_at", "2015-03-18 14:25:43.496259"], ["id", 12]]
+  [1m[36m (131.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 138ms (ActiveRecord: 132.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-18 22:25:43 +0800
+Processing by HomeController#index as HTML
+  [1m[35mMember Load (0.1ms)[0m  SELECT  "members".* FROM "members" WHERE "members"."id" = ?  ORDER BY "members"."id" ASC LIMIT 1  [["id", 12]]
+Redirected to http://localhost:3000/dashboard/index
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2015-03-18 22:25:43 +0800
+Processing by DashboardController#index as HTML
+  [1m[36mMember Load (0.1ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."id" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["id", 12]]
+  Rendered dashboard/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 123ms (Views: 122.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/dashboard-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:25:43 +0800
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:25:43 +0800
+
+
+Started GET "/assets/scaffolds-87b97982618d435a172b83480c0bdfe8.css?body=1" for 127.0.0.1 at 2015-03-18 22:25:43 +0800
+
+
+Started GET "/assets/active_admin-b6b01eac090941a7de511b7068801094.css?body=1" for 127.0.0.1 at 2015-03-18 22:25:43 +0800
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:25:43 +0800
+
+
+Started GET "/assets/registration-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:25:43 +0800
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:43 +0800
+
+
+Started GET "/assets/application-23f01bcbdc3f7bb8a1ad86d8aa8acd02.css?body=1" for 127.0.0.1 at 2015-03-18 22:25:43 +0800
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:43 +0800
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:43 +0800
+
+
+Started GET "/assets/jquery-ui/core-f6c29219d44f4267c6c5f748cb73851a.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:43 +0800
+
+
+Started GET "/assets/jquery-ui/datepicker-28441b2cd45f0545c8a439f40b98d784.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:43 +0800
+
+
+Started GET "/assets/jquery-ui/widget-406fc24d615dd4370e049e85fb5f549d.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:43 +0800
+
+
+Started GET "/assets/jquery-ui/button-a8037a4250da171316b7e7521b0d9d0b.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:43 +0800
+
+
+Started GET "/assets/jquery-ui/mouse-504ef967eca0eb03967e3c9751c36d17.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:43 +0800
+
+
+Started GET "/assets/jquery-ui/draggable-d158b51e489137b213fd1eaa96a9b92a.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:43 +0800
+
+
+Started GET "/assets/jquery-ui/position-65ef6bd55aa64766623cc74b5d7d353d.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:43 +0800
+
+
+Started GET "/assets/jquery-ui/resizable-aa565fd6aa9f42700d8c54b318c0c1c8.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:43 +0800
+
+
+Started GET "/assets/jquery-ui/dialog-ee62065c80cb02fe6e91bf5811c59c91.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:43 +0800
+
+
+Started GET "/assets/jquery-ui/tabs-7d723642f0cea4ad8b4be12b7af40214.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:43 +0800
+
+
+Started GET "/assets/jquery-ui/sortable-fe96bfa9ff14377c0dc83b42d0f191e4.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:43 +0800
+
+
+Started GET "/assets/active_admin/base-73f24d8653d67794d4eb7ac3c8266e3b.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:43 +0800
+
+
+Started GET "/assets/active_admin/lib/batch_actions-5706928449a7d192adcb4c959b623cf6.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:43 +0800
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler-71efe70af420ba0aef07b4e19fc2fc06.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:43 +0800
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu-0d4c387b749f3fc1d71179e523ab4e49.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:43 +0800
+
+
+Started GET "/assets/active_admin/lib/flash-a3dc1386603709c2a6501741817b1ca8.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:44 +0800
+
+
+Started GET "/assets/active_admin/lib/has_many-64f8975fc252419139c3a62d16c53777.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:44 +0800
+
+
+Started GET "/assets/active_admin/lib/modal_dialog-400dfa6502091f82a5e3941b8a771c46.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:44 +0800
+
+
+Started GET "/assets/active_admin/lib/per_page-239488a1a0b13f3cda3dddf002b6ed21.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:44 +0800
+
+
+Started GET "/assets/active_admin/lib/popover-4659964ef0ff6b1465b40769d440f87a.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:44 +0800
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler-18530342f84893188506c0a48a10be15.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:44 +0800
+
+
+Started GET "/assets/active_admin/ext/jquery-ui-5963f9f0bd7887f07217b87c96e27f88.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:44 +0800
+
+
+Started GET "/assets/active_admin/ext/jquery-22727936bd5e807603d51c2a59b45b7d.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:44 +0800
+
+
+Started GET "/assets/active_admin/application-eb8a267ef17a17c127e0278b098e46d5.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:44 +0800
+
+
+Started GET "/assets/dashboard-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:44 +0800
+
+
+Started GET "/assets/active_admin-835293ec52ff33915328aca69e191403.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:44 +0800
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:44 +0800
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:44 +0800
+
+
+Started GET "/assets/registration-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:44 +0800
+
+
+Started GET "/assets/application-187266367c7381d7125ca456b6c7e451.js?body=1" for 127.0.0.1 at 2015-03-18 22:25:44 +0800
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2015-03-18 22:26:29 +0800
+Processing by DashboardController#index as HTML
+  [1m[35mMember Load (0.2ms)[0m  SELECT  "members".* FROM "members" WHERE "members"."id" = ?  ORDER BY "members"."id" ASC LIMIT 1  [["id", 12]]
+  Rendered dashboard/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 209ms (Views: 194.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/active_admin-b6b01eac090941a7de511b7068801094.css?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/dashboard-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/scaffolds-87b97982618d435a172b83480c0bdfe8.css?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/registration-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/application-23f01bcbdc3f7bb8a1ad86d8aa8acd02.css?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/jquery-ui/core-f6c29219d44f4267c6c5f748cb73851a.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/jquery-ui/datepicker-28441b2cd45f0545c8a439f40b98d784.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/jquery-ui/widget-406fc24d615dd4370e049e85fb5f549d.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/jquery-ui/button-a8037a4250da171316b7e7521b0d9d0b.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/jquery-ui/mouse-504ef967eca0eb03967e3c9751c36d17.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/jquery-ui/draggable-d158b51e489137b213fd1eaa96a9b92a.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/jquery-ui/position-65ef6bd55aa64766623cc74b5d7d353d.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/jquery-ui/resizable-aa565fd6aa9f42700d8c54b318c0c1c8.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/jquery-ui/sortable-fe96bfa9ff14377c0dc83b42d0f191e4.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/jquery-ui/dialog-ee62065c80cb02fe6e91bf5811c59c91.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/jquery-ui/tabs-7d723642f0cea4ad8b4be12b7af40214.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu-0d4c387b749f3fc1d71179e523ab4e49.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/active_admin/base-73f24d8653d67794d4eb7ac3c8266e3b.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/active_admin/lib/batch_actions-5706928449a7d192adcb4c959b623cf6.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/active_admin/lib/flash-a3dc1386603709c2a6501741817b1ca8.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler-71efe70af420ba0aef07b4e19fc2fc06.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/active_admin/lib/has_many-64f8975fc252419139c3a62d16c53777.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/active_admin/lib/modal_dialog-400dfa6502091f82a5e3941b8a771c46.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/active_admin/lib/per_page-239488a1a0b13f3cda3dddf002b6ed21.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/active_admin/lib/popover-4659964ef0ff6b1465b40769d440f87a.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler-18530342f84893188506c0a48a10be15.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/active_admin/ext/jquery-ui-5963f9f0bd7887f07217b87c96e27f88.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/active_admin/ext/jquery-22727936bd5e807603d51c2a59b45b7d.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/active_admin/application-eb8a267ef17a17c127e0278b098e46d5.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/active_admin-835293ec52ff33915328aca69e191403.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/dashboard-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/registration-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/assets/application-187266367c7381d7125ca456b6c7e451.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:30 +0800
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+Processing by DashboardController#index as HTML
+  [1m[36mMember Load (0.1ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."id" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["id", 12]]
+  Rendered dashboard/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 151ms (Views: 149.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/active_admin-b6b01eac090941a7de511b7068801094.css?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/dashboard-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/application-23f01bcbdc3f7bb8a1ad86d8aa8acd02.css?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/registration-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/scaffolds-87b97982618d435a172b83480c0bdfe8.css?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/jquery-ui/core-f6c29219d44f4267c6c5f748cb73851a.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/jquery-ui/datepicker-28441b2cd45f0545c8a439f40b98d784.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/jquery-ui/widget-406fc24d615dd4370e049e85fb5f549d.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/jquery-ui/button-a8037a4250da171316b7e7521b0d9d0b.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/jquery-ui/mouse-504ef967eca0eb03967e3c9751c36d17.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/jquery-ui/draggable-d158b51e489137b213fd1eaa96a9b92a.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/jquery-ui/position-65ef6bd55aa64766623cc74b5d7d353d.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/jquery-ui/resizable-aa565fd6aa9f42700d8c54b318c0c1c8.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/jquery-ui/sortable-fe96bfa9ff14377c0dc83b42d0f191e4.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/jquery-ui/dialog-ee62065c80cb02fe6e91bf5811c59c91.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/jquery-ui/tabs-7d723642f0cea4ad8b4be12b7af40214.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/active_admin/base-73f24d8653d67794d4eb7ac3c8266e3b.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/active_admin/lib/batch_actions-5706928449a7d192adcb4c959b623cf6.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler-71efe70af420ba0aef07b4e19fc2fc06.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu-0d4c387b749f3fc1d71179e523ab4e49.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/active_admin/lib/flash-a3dc1386603709c2a6501741817b1ca8.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/active_admin/lib/has_many-64f8975fc252419139c3a62d16c53777.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/active_admin/lib/modal_dialog-400dfa6502091f82a5e3941b8a771c46.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/active_admin/lib/per_page-239488a1a0b13f3cda3dddf002b6ed21.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/active_admin/lib/popover-4659964ef0ff6b1465b40769d440f87a.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler-18530342f84893188506c0a48a10be15.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/active_admin/ext/jquery-ui-5963f9f0bd7887f07217b87c96e27f88.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/active_admin/ext/jquery-22727936bd5e807603d51c2a59b45b7d.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/active_admin/application-eb8a267ef17a17c127e0278b098e46d5.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/active_admin-835293ec52ff33915328aca69e191403.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/dashboard-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/application-187266367c7381d7125ca456b6c7e451.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/assets/registration-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:26:52 +0800
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+Processing by DashboardController#index as HTML
+  [1m[35mMember Load (0.2ms)[0m  SELECT  "members".* FROM "members" WHERE "members"."id" = ?  ORDER BY "members"."id" ASC LIMIT 1  [["id", 12]]
+  Rendered dashboard/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 139ms (Views: 125.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/active_admin-b6b01eac090941a7de511b7068801094.css?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/dashboard-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/registration-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/scaffolds-87b97982618d435a172b83480c0bdfe8.css?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/application-23f01bcbdc3f7bb8a1ad86d8aa8acd02.css?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/jquery-ui/core-f6c29219d44f4267c6c5f748cb73851a.js?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/jquery-ui/datepicker-28441b2cd45f0545c8a439f40b98d784.js?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/jquery-ui/button-a8037a4250da171316b7e7521b0d9d0b.js?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/jquery-ui/mouse-504ef967eca0eb03967e3c9751c36d17.js?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/jquery-ui/draggable-d158b51e489137b213fd1eaa96a9b92a.js?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/jquery-ui/widget-406fc24d615dd4370e049e85fb5f549d.js?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/jquery-ui/position-65ef6bd55aa64766623cc74b5d7d353d.js?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/jquery-ui/resizable-aa565fd6aa9f42700d8c54b318c0c1c8.js?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/jquery-ui/dialog-ee62065c80cb02fe6e91bf5811c59c91.js?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/jquery-ui/tabs-7d723642f0cea4ad8b4be12b7af40214.js?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/jquery-ui/sortable-fe96bfa9ff14377c0dc83b42d0f191e4.js?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/active_admin/base-73f24d8653d67794d4eb7ac3c8266e3b.js?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/active_admin/lib/batch_actions-5706928449a7d192adcb4c959b623cf6.js?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler-71efe70af420ba0aef07b4e19fc2fc06.js?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/active_admin/lib/flash-a3dc1386603709c2a6501741817b1ca8.js?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu-0d4c387b749f3fc1d71179e523ab4e49.js?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/active_admin/lib/modal_dialog-400dfa6502091f82a5e3941b8a771c46.js?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/active_admin/lib/has_many-64f8975fc252419139c3a62d16c53777.js?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/active_admin/lib/per_page-239488a1a0b13f3cda3dddf002b6ed21.js?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/active_admin/lib/popover-4659964ef0ff6b1465b40769d440f87a.js?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler-18530342f84893188506c0a48a10be15.js?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/active_admin/ext/jquery-ui-5963f9f0bd7887f07217b87c96e27f88.js?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/active_admin/ext/jquery-22727936bd5e807603d51c2a59b45b7d.js?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/active_admin/application-eb8a267ef17a17c127e0278b098e46d5.js?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/active_admin-835293ec52ff33915328aca69e191403.js?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/dashboard-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/registration-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/assets/application-187266367c7381d7125ca456b6c7e451.js?body=1" for 127.0.0.1 at 2015-03-18 22:29:52 +0800
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+Processing by DashboardController#index as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."id" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["id", 12]]
+  Rendered dashboard/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 142ms (Views: 124.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/active_admin-b6b01eac090941a7de511b7068801094.css?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/dashboard-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/registration-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/scaffolds-87b97982618d435a172b83480c0bdfe8.css?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/application-23f01bcbdc3f7bb8a1ad86d8aa8acd02.css?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/jquery-ui/core-f6c29219d44f4267c6c5f748cb73851a.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/jquery-ui/datepicker-28441b2cd45f0545c8a439f40b98d784.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/jquery-ui/widget-406fc24d615dd4370e049e85fb5f549d.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/jquery-ui/button-a8037a4250da171316b7e7521b0d9d0b.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/jquery-ui/mouse-504ef967eca0eb03967e3c9751c36d17.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/jquery-ui/draggable-d158b51e489137b213fd1eaa96a9b92a.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/jquery-ui/position-65ef6bd55aa64766623cc74b5d7d353d.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/jquery-ui/resizable-aa565fd6aa9f42700d8c54b318c0c1c8.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/jquery-ui/sortable-fe96bfa9ff14377c0dc83b42d0f191e4.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/jquery-ui/dialog-ee62065c80cb02fe6e91bf5811c59c91.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/jquery-ui/tabs-7d723642f0cea4ad8b4be12b7af40214.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/active_admin/base-73f24d8653d67794d4eb7ac3c8266e3b.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/active_admin/lib/batch_actions-5706928449a7d192adcb4c959b623cf6.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler-71efe70af420ba0aef07b4e19fc2fc06.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu-0d4c387b749f3fc1d71179e523ab4e49.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/active_admin/lib/flash-a3dc1386603709c2a6501741817b1ca8.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/active_admin/lib/modal_dialog-400dfa6502091f82a5e3941b8a771c46.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/active_admin/lib/has_many-64f8975fc252419139c3a62d16c53777.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/active_admin/lib/per_page-239488a1a0b13f3cda3dddf002b6ed21.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler-18530342f84893188506c0a48a10be15.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/active_admin/lib/popover-4659964ef0ff6b1465b40769d440f87a.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/active_admin/ext/jquery-ui-5963f9f0bd7887f07217b87c96e27f88.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/active_admin/ext/jquery-22727936bd5e807603d51c2a59b45b7d.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/active_admin/application-eb8a267ef17a17c127e0278b098e46d5.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/active_admin-835293ec52ff33915328aca69e191403.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/dashboard-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/registration-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started GET "/assets/application-187266367c7381d7125ca456b6c7e451.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:38 +0800
+
+
+Started POST "/dashboard/index" for 127.0.0.1 at 2015-03-18 22:30:42 +0800
+
+ActionController::RoutingError (No route matches [POST] "/dashboard/index"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /home/jacemonje/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/jacemonje/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/jacemonje/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.6ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.8ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (61.3ms)
+
+
+Started POST "/dashboard/index" for 127.0.0.1 at 2015-03-18 22:30:50 +0800
+Processing by DashboardController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6PzQm9rGIi3da8NYplATcWai/LItf7PXZzJbpJ6oJ3IIUidm/9f33REoy1vKTrNExABnIvrggdVYUMi61rHyFw==", "work"=>{"work"=>#<ActionDispatch::Http::UploadedFile:0x00000004c3bb18 @tempfile=#<Tempfile:/tmp/RackMultipart20150318-4890-11u4wi8.pdf>, @original_filename="BPM - CVS Leg.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"work[work]\"; filename=\"BPM - CVS Leg.pdf\"\r\nContent-Type: application/pdf\r\n">}, "commit"=>"Upload"}
+  [1m[35mMember Load (0.1ms)[0m  SELECT  "members".* FROM "members" WHERE "members"."id" = ?  ORDER BY "members"."id" ASC LIMIT 1  [["id", 12]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mMember Load (0.2ms)[0m  SELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "members" SET "work" = ?, "updated_at" = ? WHERE "members"."id" = ?[0m  [["work", "TAL_Apparel_Case.pdf"], ["updated_at", "2015-03-18 14:30:50.674737"], ["id", 12]]
+  [1m[35m (241.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 261ms (ActiveRecord: 242.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-18 22:30:50 +0800
+Processing by HomeController#index as HTML
+  [1m[36mMember Load (0.1ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."id" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["id", 12]]
+Redirected to http://localhost:3000/dashboard/index
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2015-03-18 22:30:50 +0800
+Processing by DashboardController#index as HTML
+  [1m[35mMember Load (0.1ms)[0m  SELECT  "members".* FROM "members" WHERE "members"."id" = ?  ORDER BY "members"."id" ASC LIMIT 1  [["id", 12]]
+  Rendered dashboard/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 135ms (Views: 133.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/scaffolds-87b97982618d435a172b83480c0bdfe8.css?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/registration-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/active_admin-b6b01eac090941a7de511b7068801094.css?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/dashboard-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/application-23f01bcbdc3f7bb8a1ad86d8aa8acd02.css?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/jquery-ui/core-f6c29219d44f4267c6c5f748cb73851a.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/jquery-ui/datepicker-28441b2cd45f0545c8a439f40b98d784.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/jquery-ui/widget-406fc24d615dd4370e049e85fb5f549d.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/jquery-ui/button-a8037a4250da171316b7e7521b0d9d0b.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/jquery-ui/mouse-504ef967eca0eb03967e3c9751c36d17.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/jquery-ui/position-65ef6bd55aa64766623cc74b5d7d353d.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/jquery-ui/resizable-aa565fd6aa9f42700d8c54b318c0c1c8.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/jquery-ui/draggable-d158b51e489137b213fd1eaa96a9b92a.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/jquery-ui/dialog-ee62065c80cb02fe6e91bf5811c59c91.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/jquery-ui/sortable-fe96bfa9ff14377c0dc83b42d0f191e4.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/jquery-ui/tabs-7d723642f0cea4ad8b4be12b7af40214.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/active_admin/base-73f24d8653d67794d4eb7ac3c8266e3b.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/active_admin/lib/batch_actions-5706928449a7d192adcb4c959b623cf6.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler-71efe70af420ba0aef07b4e19fc2fc06.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu-0d4c387b749f3fc1d71179e523ab4e49.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/active_admin/lib/has_many-64f8975fc252419139c3a62d16c53777.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/active_admin/lib/popover-4659964ef0ff6b1465b40769d440f87a.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/active_admin/lib/flash-a3dc1386603709c2a6501741817b1ca8.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/active_admin/ext/jquery-ui-5963f9f0bd7887f07217b87c96e27f88.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler-18530342f84893188506c0a48a10be15.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/active_admin/lib/modal_dialog-400dfa6502091f82a5e3941b8a771c46.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/active_admin/lib/per_page-239488a1a0b13f3cda3dddf002b6ed21.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/active_admin/application-eb8a267ef17a17c127e0278b098e46d5.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/active_admin/ext/jquery-22727936bd5e807603d51c2a59b45b7d.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/active_admin-835293ec52ff33915328aca69e191403.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/dashboard-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/registration-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started GET "/assets/application-187266367c7381d7125ca456b6c7e451.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:51 +0800
+
+
+Started DELETE "/members/sign_out" for 127.0.0.1 at 2015-03-18 22:30:54 +0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"IxiVciyaPChxrXVmvjzoOJd3MlpZFt9EgE2I67t/mArDtmKPCYvp2L3ufWXSIkgNNdWpyo6J7Ua/Lxv182ZNbw=="}
+  [1m[36mMember Load (0.1ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."id" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["id", 12]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-18 22:30:54 +0800
+Processing by HomeController#index as HTML
+  [1m[35mMember Load (0.4ms)[0m  SELECT  "members".* FROM "members"  ORDER BY "members"."id" DESC LIMIT 3
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events"  ORDER BY "events"."id" DESC LIMIT 3[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 139ms (Views: 126.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/active_admin-b6b01eac090941a7de511b7068801094.css?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/dashboard-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/scaffolds-87b97982618d435a172b83480c0bdfe8.css?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/registration-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/application-23f01bcbdc3f7bb8a1ad86d8aa8acd02.css?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/jquery-ui/core-f6c29219d44f4267c6c5f748cb73851a.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/jquery-ui/datepicker-28441b2cd45f0545c8a439f40b98d784.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/jquery-ui/widget-406fc24d615dd4370e049e85fb5f549d.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/jquery-ui/button-a8037a4250da171316b7e7521b0d9d0b.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/jquery-ui/mouse-504ef967eca0eb03967e3c9751c36d17.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/jquery-ui/draggable-d158b51e489137b213fd1eaa96a9b92a.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/jquery-ui/resizable-aa565fd6aa9f42700d8c54b318c0c1c8.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/jquery-ui/dialog-ee62065c80cb02fe6e91bf5811c59c91.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/jquery-ui/position-65ef6bd55aa64766623cc74b5d7d353d.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/jquery-ui/sortable-fe96bfa9ff14377c0dc83b42d0f191e4.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/active_admin/base-73f24d8653d67794d4eb7ac3c8266e3b.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/active_admin/lib/batch_actions-5706928449a7d192adcb4c959b623cf6.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/jquery-ui/tabs-7d723642f0cea4ad8b4be12b7af40214.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler-71efe70af420ba0aef07b4e19fc2fc06.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu-0d4c387b749f3fc1d71179e523ab4e49.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/active_admin/lib/flash-a3dc1386603709c2a6501741817b1ca8.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/active_admin/lib/has_many-64f8975fc252419139c3a62d16c53777.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/active_admin/lib/popover-4659964ef0ff6b1465b40769d440f87a.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/active_admin/lib/per_page-239488a1a0b13f3cda3dddf002b6ed21.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/active_admin/lib/modal_dialog-400dfa6502091f82a5e3941b8a771c46.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler-18530342f84893188506c0a48a10be15.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/active_admin/ext/jquery-ui-5963f9f0bd7887f07217b87c96e27f88.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/active_admin/ext/jquery-22727936bd5e807603d51c2a59b45b7d.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/active_admin-835293ec52ff33915328aca69e191403.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/active_admin/application-eb8a267ef17a17c127e0278b098e46d5.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/dashboard-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/registration-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/assets/application-187266367c7381d7125ca456b6c7e451.js?body=1" for 127.0.0.1 at 2015-03-18 22:30:55 +0800
+
+
+Started GET "/members/sign_up" for 127.0.0.1 at 2015-03-18 22:30:57 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 136ms (Views: 134.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2015-03-18 22:31:00 +0800
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2015-03-18 22:31:00 +0800
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/bundler/gems/active_admin-60914c887942/app/views/active_admin/devise/shared/_links.erb (4.4ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/bundler/gems/active_admin-60914c887942/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (19.5ms)
+Completed 200 OK in 111ms (Views: 104.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2015-03-18 22:31:01 +0800
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2015-03-18 22:31:01 +0800
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/bundler/gems/active_admin-60914c887942/app/views/active_admin/devise/shared/_links.erb (2.1ms)
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/bundler/gems/active_admin-60914c887942/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (12.4ms)
+Completed 200 OK in 100ms (Views: 99.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin-b6b01eac090941a7de511b7068801094.css?body=1" for 127.0.0.1 at 2015-03-18 22:31:01 +0800
+
+
+Started GET "/assets/active_admin/print-73e4a09c493ba4995edb3c13b58e91e0.css?body=1" for 127.0.0.1 at 2015-03-18 22:31:01 +0800
+
+
+Started GET "/assets/jquery-ui/datepicker-28441b2cd45f0545c8a439f40b98d784.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:01 +0800
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:01 +0800
+
+
+Started GET "/assets/jquery-ui/widget-406fc24d615dd4370e049e85fb5f549d.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:01 +0800
+
+
+Started GET "/assets/jquery-ui/core-f6c29219d44f4267c6c5f748cb73851a.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:01 +0800
+
+
+Started GET "/assets/jquery-ui/button-a8037a4250da171316b7e7521b0d9d0b.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:01 +0800
+
+
+Started GET "/assets/jquery-ui/mouse-504ef967eca0eb03967e3c9751c36d17.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:01 +0800
+
+
+Started GET "/assets/jquery-ui/draggable-d158b51e489137b213fd1eaa96a9b92a.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:01 +0800
+
+
+Started GET "/assets/jquery-ui/position-65ef6bd55aa64766623cc74b5d7d353d.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:01 +0800
+
+
+Started GET "/assets/jquery-ui/resizable-aa565fd6aa9f42700d8c54b318c0c1c8.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:01 +0800
+
+
+Started GET "/assets/jquery-ui/dialog-ee62065c80cb02fe6e91bf5811c59c91.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:01 +0800
+
+
+Started GET "/assets/jquery-ui/sortable-fe96bfa9ff14377c0dc83b42d0f191e4.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:01 +0800
+
+
+Started GET "/assets/jquery-ui/tabs-7d723642f0cea4ad8b4be12b7af40214.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:01 +0800
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:01 +0800
+
+
+Started GET "/assets/active_admin/base-73f24d8653d67794d4eb7ac3c8266e3b.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:01 +0800
+
+
+Started GET "/assets/active_admin/lib/batch_actions-5706928449a7d192adcb4c959b623cf6.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:01 +0800
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler-71efe70af420ba0aef07b4e19fc2fc06.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:01 +0800
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu-0d4c387b749f3fc1d71179e523ab4e49.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:01 +0800
+
+
+Started GET "/assets/active_admin/lib/flash-a3dc1386603709c2a6501741817b1ca8.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:01 +0800
+
+
+Started GET "/assets/active_admin/lib/has_many-64f8975fc252419139c3a62d16c53777.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:01 +0800
+
+
+Started GET "/assets/active_admin/lib/modal_dialog-400dfa6502091f82a5e3941b8a771c46.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:01 +0800
+
+
+Started GET "/assets/active_admin/lib/popover-4659964ef0ff6b1465b40769d440f87a.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:01 +0800
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler-18530342f84893188506c0a48a10be15.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:01 +0800
+
+
+Started GET "/assets/active_admin/lib/per_page-239488a1a0b13f3cda3dddf002b6ed21.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:01 +0800
+
+
+Started GET "/assets/active_admin/ext/jquery-ui-5963f9f0bd7887f07217b87c96e27f88.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:01 +0800
+
+
+Started GET "/assets/active_admin/ext/jquery-22727936bd5e807603d51c2a59b45b7d.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:01 +0800
+
+
+Started GET "/assets/active_admin/application-eb8a267ef17a17c127e0278b098e46d5.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:01 +0800
+
+
+Started GET "/assets/active_admin-835293ec52ff33915328aca69e191403.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:01 +0800
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2015-03-18 22:31:03 +0800
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bubMelxebOjfPvj8syZaQX0nU+jO333jqXPuIgjm7AAIEUb48Is1mmaVwYI177JhyCx/3wrvS6baovZyYU6wkQ==", "admin_user"=>{"email"=>"god@writerskill.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ?  ORDER BY "admin_users"."id" ASC LIMIT 1[0m  [["email", "god@writerskill.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "admin_users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "admin_users"."id" = ?[0m  [["last_sign_in_at", "2015-03-18 08:31:27.407215"], ["current_sign_in_at", "2015-03-18 14:31:03.453795"], ["sign_in_count", 14], ["updated_at", "2015-03-18 14:31:03.454898"], ["id", 2]]
+  [1m[35m (288.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 422ms (ActiveRecord: 288.7ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2015-03-18 22:31:03 +0800
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ?  ORDER BY "admin_users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/bundler/gems/active_admin-60914c887942/app/views/active_admin/page/index.html.arb (99.5ms)
+Completed 200 OK in 107ms (Views: 102.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/active_admin-b6b01eac090941a7de511b7068801094.css?body=1" for 127.0.0.1 at 2015-03-18 22:31:03 +0800
+
+
+Started GET "/assets/active_admin/print-73e4a09c493ba4995edb3c13b58e91e0.css?body=1" for 127.0.0.1 at 2015-03-18 22:31:03 +0800
+
+
+Started GET "/assets/jquery-ui/core-f6c29219d44f4267c6c5f748cb73851a.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:04 +0800
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:04 +0800
+
+
+Started GET "/assets/jquery-ui/datepicker-28441b2cd45f0545c8a439f40b98d784.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:04 +0800
+
+
+Started GET "/assets/jquery-ui/widget-406fc24d615dd4370e049e85fb5f549d.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:04 +0800
+
+
+Started GET "/assets/jquery-ui/button-a8037a4250da171316b7e7521b0d9d0b.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:04 +0800
+
+
+Started GET "/assets/jquery-ui/mouse-504ef967eca0eb03967e3c9751c36d17.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:04 +0800
+
+
+Started GET "/assets/jquery-ui/draggable-d158b51e489137b213fd1eaa96a9b92a.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:04 +0800
+
+
+Started GET "/assets/jquery-ui/position-65ef6bd55aa64766623cc74b5d7d353d.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:04 +0800
+
+
+Started GET "/assets/jquery-ui/resizable-aa565fd6aa9f42700d8c54b318c0c1c8.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:04 +0800
+
+
+Started GET "/assets/jquery-ui/dialog-ee62065c80cb02fe6e91bf5811c59c91.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:04 +0800
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:04 +0800
+
+
+Started GET "/assets/jquery-ui/tabs-7d723642f0cea4ad8b4be12b7af40214.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:04 +0800
+
+
+Started GET "/assets/jquery-ui/sortable-fe96bfa9ff14377c0dc83b42d0f191e4.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:04 +0800
+
+
+Started GET "/assets/active_admin/base-73f24d8653d67794d4eb7ac3c8266e3b.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:04 +0800
+
+
+Started GET "/assets/active_admin/lib/batch_actions-5706928449a7d192adcb4c959b623cf6.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:04 +0800
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler-71efe70af420ba0aef07b4e19fc2fc06.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:04 +0800
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu-0d4c387b749f3fc1d71179e523ab4e49.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:04 +0800
+
+
+Started GET "/assets/active_admin/lib/flash-a3dc1386603709c2a6501741817b1ca8.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:04 +0800
+
+
+Started GET "/assets/active_admin/lib/has_many-64f8975fc252419139c3a62d16c53777.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:04 +0800
+
+
+Started GET "/assets/active_admin/lib/modal_dialog-400dfa6502091f82a5e3941b8a771c46.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:04 +0800
+
+
+Started GET "/assets/active_admin/lib/per_page-239488a1a0b13f3cda3dddf002b6ed21.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:04 +0800
+
+
+Started GET "/assets/active_admin/lib/popover-4659964ef0ff6b1465b40769d440f87a.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:04 +0800
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler-18530342f84893188506c0a48a10be15.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:04 +0800
+
+
+Started GET "/assets/active_admin/ext/jquery-ui-5963f9f0bd7887f07217b87c96e27f88.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:04 +0800
+
+
+Started GET "/assets/active_admin/ext/jquery-22727936bd5e807603d51c2a59b45b7d.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:04 +0800
+
+
+Started GET "/assets/active_admin/application-eb8a267ef17a17c127e0278b098e46d5.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:04 +0800
+
+
+Started GET "/assets/active_admin-835293ec52ff33915328aca69e191403.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:04 +0800
+
+
+Started GET "/admin/members" for 127.0.0.1 at 2015-03-18 22:31:05 +0800
+Processing by Admin::MembersController#index as HTML
+  [1m[35mAdminUser Load (0.1ms)[0m  SELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ?  ORDER BY "admin_users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "members" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "members" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "members"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "members" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36mMember Load (0.4ms)[0m  [1mSELECT  "members".* FROM "members"  ORDER BY "members"."id" desc LIMIT 30 OFFSET 0[0m
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/bundler/gems/active_admin-60914c887942/app/views/active_admin/resource/index.html.arb (259.8ms)
+Completed 200 OK in 266ms (Views: 262.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/active_admin/print-73e4a09c493ba4995edb3c13b58e91e0.css?body=1" for 127.0.0.1 at 2015-03-18 22:31:05 +0800
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:05 +0800
+
+
+Started GET "/assets/active_admin-b6b01eac090941a7de511b7068801094.css?body=1" for 127.0.0.1 at 2015-03-18 22:31:05 +0800
+
+
+Started GET "/assets/jquery-ui/mouse-504ef967eca0eb03967e3c9751c36d17.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:05 +0800
+
+
+Started GET "/assets/jquery-ui/widget-406fc24d615dd4370e049e85fb5f549d.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:05 +0800
+
+
+Started GET "/assets/jquery-ui/datepicker-28441b2cd45f0545c8a439f40b98d784.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:05 +0800
+
+
+Started GET "/assets/jquery-ui/button-a8037a4250da171316b7e7521b0d9d0b.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:05 +0800
+
+
+Started GET "/assets/jquery-ui/draggable-d158b51e489137b213fd1eaa96a9b92a.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:05 +0800
+
+
+Started GET "/assets/jquery-ui/core-f6c29219d44f4267c6c5f748cb73851a.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:05 +0800
+
+
+Started GET "/assets/jquery-ui/position-65ef6bd55aa64766623cc74b5d7d353d.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:05 +0800
+
+
+Started GET "/assets/jquery-ui/resizable-aa565fd6aa9f42700d8c54b318c0c1c8.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:06 +0800
+
+
+Started GET "/assets/jquery-ui/dialog-ee62065c80cb02fe6e91bf5811c59c91.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:06 +0800
+
+
+Started GET "/assets/jquery-ui/tabs-7d723642f0cea4ad8b4be12b7af40214.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:06 +0800
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:06 +0800
+
+
+Started GET "/assets/jquery-ui/sortable-fe96bfa9ff14377c0dc83b42d0f191e4.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:06 +0800
+
+
+Started GET "/assets/active_admin/base-73f24d8653d67794d4eb7ac3c8266e3b.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:06 +0800
+
+
+Started GET "/assets/active_admin/lib/batch_actions-5706928449a7d192adcb4c959b623cf6.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:06 +0800
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler-71efe70af420ba0aef07b4e19fc2fc06.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:06 +0800
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu-0d4c387b749f3fc1d71179e523ab4e49.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:06 +0800
+
+
+Started GET "/assets/active_admin/lib/flash-a3dc1386603709c2a6501741817b1ca8.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:06 +0800
+
+
+Started GET "/assets/active_admin/lib/has_many-64f8975fc252419139c3a62d16c53777.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:06 +0800
+
+
+Started GET "/assets/active_admin/lib/modal_dialog-400dfa6502091f82a5e3941b8a771c46.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:06 +0800
+
+
+Started GET "/assets/active_admin/lib/per_page-239488a1a0b13f3cda3dddf002b6ed21.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:06 +0800
+
+
+Started GET "/assets/active_admin/lib/popover-4659964ef0ff6b1465b40769d440f87a.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:06 +0800
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler-18530342f84893188506c0a48a10be15.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:06 +0800
+
+
+Started GET "/assets/active_admin/ext/jquery-ui-5963f9f0bd7887f07217b87c96e27f88.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:06 +0800
+
+
+Started GET "/assets/active_admin/ext/jquery-22727936bd5e807603d51c2a59b45b7d.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:06 +0800
+
+
+Started GET "/assets/active_admin/application-eb8a267ef17a17c127e0278b098e46d5.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:06 +0800
+
+
+Started GET "/assets/active_admin-835293ec52ff33915328aca69e191403.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:06 +0800
+
+
+Started GET "/admin/members/12" for 127.0.0.1 at 2015-03-18 22:31:21 +0800
+Processing by Admin::MembersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ?  ORDER BY "admin_users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mMember Load (0.1ms)[0m  SELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Member"], ["resource_id", "12"], ["namespace", "admin"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?  [["resource_type", "Member"], ["resource_id", "12"], ["namespace", "admin"]]
+  Rendered /home/jacemonje/.rvm/gems/ruby-2.2.0/bundler/gems/active_admin-60914c887942/app/views/active_admin/resource/show.html.arb (144.0ms)
+Completed 200 OK in 150ms (Views: 146.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/active_admin-b6b01eac090941a7de511b7068801094.css?body=1" for 127.0.0.1 at 2015-03-18 22:31:22 +0800
+
+
+Started GET "/assets/active_admin/print-73e4a09c493ba4995edb3c13b58e91e0.css?body=1" for 127.0.0.1 at 2015-03-18 22:31:22 +0800
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:22 +0800
+
+
+Started GET "/assets/jquery-ui/datepicker-28441b2cd45f0545c8a439f40b98d784.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:22 +0800
+
+
+Started GET "/assets/jquery-ui/widget-406fc24d615dd4370e049e85fb5f549d.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:22 +0800
+
+
+Started GET "/assets/jquery-ui/core-f6c29219d44f4267c6c5f748cb73851a.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:22 +0800
+
+
+Started GET "/assets/jquery-ui/button-a8037a4250da171316b7e7521b0d9d0b.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:22 +0800
+
+
+Started GET "/assets/jquery-ui/mouse-504ef967eca0eb03967e3c9751c36d17.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:22 +0800
+
+
+Started GET "/assets/jquery-ui/draggable-d158b51e489137b213fd1eaa96a9b92a.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:22 +0800
+
+
+Started GET "/assets/jquery-ui/resizable-aa565fd6aa9f42700d8c54b318c0c1c8.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:22 +0800
+
+
+Started GET "/assets/jquery-ui/dialog-ee62065c80cb02fe6e91bf5811c59c91.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:22 +0800
+
+
+Started GET "/assets/jquery-ui/position-65ef6bd55aa64766623cc74b5d7d353d.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:22 +0800
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:22 +0800
+
+
+Started GET "/assets/jquery-ui/sortable-fe96bfa9ff14377c0dc83b42d0f191e4.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:22 +0800
+
+
+Started GET "/assets/jquery-ui/tabs-7d723642f0cea4ad8b4be12b7af40214.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:22 +0800
+
+
+Started GET "/assets/active_admin/base-73f24d8653d67794d4eb7ac3c8266e3b.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:22 +0800
+
+
+Started GET "/assets/active_admin/lib/batch_actions-5706928449a7d192adcb4c959b623cf6.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:22 +0800
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler-71efe70af420ba0aef07b4e19fc2fc06.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:22 +0800
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu-0d4c387b749f3fc1d71179e523ab4e49.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:22 +0800
+
+
+Started GET "/assets/active_admin/lib/flash-a3dc1386603709c2a6501741817b1ca8.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:22 +0800
+
+
+Started GET "/assets/active_admin/lib/has_many-64f8975fc252419139c3a62d16c53777.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:22 +0800
+
+
+Started GET "/assets/active_admin/lib/modal_dialog-400dfa6502091f82a5e3941b8a771c46.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:22 +0800
+
+
+Started GET "/assets/active_admin/lib/per_page-239488a1a0b13f3cda3dddf002b6ed21.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:22 +0800
+
+
+Started GET "/assets/active_admin/lib/popover-4659964ef0ff6b1465b40769d440f87a.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:22 +0800
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler-18530342f84893188506c0a48a10be15.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:22 +0800
+
+
+Started GET "/assets/active_admin/ext/jquery-ui-5963f9f0bd7887f07217b87c96e27f88.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:22 +0800
+
+
+Started GET "/assets/active_admin/ext/jquery-22727936bd5e807603d51c2a59b45b7d.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:22 +0800
+
+
+Started GET "/assets/active_admin/application-eb8a267ef17a17c127e0278b098e46d5.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:22 +0800
+
+
+Started GET "/assets/active_admin-835293ec52ff33915328aca69e191403.js?body=1" for 127.0.0.1 at 2015-03-18 22:31:22 +0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-18 22:35:16 +0800
+Processing by HomeController#index as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1mSELECT  "members".* FROM "members"  ORDER BY "members"."id" DESC LIMIT 3[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events"  ORDER BY "events"."id" DESC LIMIT 3
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 189ms (Views: 170.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/events/2" for 127.0.0.1 at 2015-03-18 22:35:18 +0800
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered events/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 128ms (Views: 126.9ms | ActiveRecord: 0.1ms)

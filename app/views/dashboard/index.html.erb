@@ -42,12 +42,17 @@
   </div>
 
   <br>
-  <br>
 
+    <div>
 
+        <%= form_for(:work, url: submit_path) do |f| %>
 
-
-
+        <b>Upload Work</b> <br>
+          <%= f.file_field :work %>
+          <br>
+          <%= f.submit 'Upload' %>
+        <% end %>
+    </div>
 
   <br>
 
@@ -56,16 +61,13 @@
     <br>
     <%= link_to current_member.work.url, current_member.work.url  %>
   </div>
-<br>
+
+  <br>
+
   <div>
     <b>Events attended:</b>
     <br>
-
-
-
   </div>
 
 
 </center>
-
-</p>

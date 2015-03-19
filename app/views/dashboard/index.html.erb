@@ -57,9 +57,10 @@
   <br>
 
   <div>
-    <b>Uploaded Works:</b>
+    <b>Uploaded Works:</b><br>
+    <%= link_to current_member.work, current_member.work.url %>
     <br>
-    <%= link_to current_member.work.url, current_member.work.url  %>
+
   </div>
 
   <br>

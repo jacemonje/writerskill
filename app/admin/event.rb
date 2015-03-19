@@ -18,6 +18,22 @@ ActiveAdmin.register Event do
     actions
   end
 
+  form do |f|
+    f.inputs "Event Details" do
+      f.input :name
+      f.input :organized_by
+      f.input :venue
+      f.input :schedule
+      f.input :eventclass
+      f.input :attendance
+      f.input :addpoint
+    end
+    f.actions
+  end
+
+
+
+
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #

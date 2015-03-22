@@ -26,8 +26,9 @@
     <% else %>
 
       <%= form_for(:login_params, url: attend_path) do |f| %>
-
+        ID Number<br>
         <%= f.text_field :idnumber %>
+        Email<br><br><br>
         <%= f.text_field :email %>
         <br>
         <%= f.submit 'Register' %>
@@ -39,7 +40,7 @@
   </div>
 
   Attendees:
-  
+
 
 
 </p>

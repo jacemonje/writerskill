@@ -52,6 +52,9 @@ ActiveAdmin.register Member do
       f.input :phone
       f.input :address
       f.input :birthday
+      f.input :fb_url
+      f.input :member_status
+      f.input :member_type
       f.input :emergency_person
       f.input :emergency_phone
       f.input :email

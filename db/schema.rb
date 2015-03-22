@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150317134616) do
+ActiveRecord::Schema.define(version: 20150322065900) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -73,15 +73,15 @@ ActiveRecord::Schema.define(version: 20150317134616) do
     t.string   "emergency_person"
     t.string   "emergency_phone"
     t.string   "fb_url"
-    t.string   "member_status",          default: "Accepted"
+    t.string   "member_status",          default: "Applicant"
     t.string   "member_type",            default: "Regular"
     t.integer  "points",                 default: 0
-    t.string   "email",                  default: "",         null: false
-    t.string   "encrypted_password",     default: "",         null: false
+    t.string   "email",                  default: "",          null: false
+    t.string   "encrypted_password",     default: "",          null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,          null: false
+    t.integer  "sign_in_count",          default: 0,           null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"

@@ -44,6 +44,8 @@ gem 'cancan'
 gem 'carrierwave'
 gem 'wicked_pdf'
 
+gem 'active_admin_import', '2.1.2'
+
 gem 'activeadmin',         github: 'gregbell/active_admin'
 gem 'ransack',             github: 'ernie/ransack'
 gem 'inherited_resources', github: 'josevalim/inherited_resources'

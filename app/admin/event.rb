@@ -1,4 +1,5 @@
 ActiveAdmin.register Event do
+  active_admin_import
   permit_params :eventid, :name, :organized_by, :venue, :schedule, :eventclass, :attendance, :addpoint
 
   def get_attendance

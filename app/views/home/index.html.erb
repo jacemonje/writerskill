@@ -1,7 +1,9 @@
 <center>
-<h1>Writerskill Member Tracker and Events Management System</h1>
+<%= image_tag("logo.jpg") %>
+<h1>Member Tracker and Events Management System</h1>
 
 
+<br>
 <b>Last 3 members who have logged in!</b>
 
 <br>
@@ -13,34 +15,55 @@
 <br>
 <br>
 
-<div id = "projects">
+<style type="text/css">
+#wrap {
+   width:600px;
+   margin:0 auto;
+}
+#left_col {
+   float:left;
+   width:300px;
+}
+#right_col {
+   float:right;
+   width:300px;
+}
+</style>
 
-  <b>Latest Projects</b>
-  <br>
+<div id="wrap">
+    <div id="left_col">
 
-  <% @workshops.each do |w| %>
-    <% if w.eventclass == "Project" %>
-    <%= link_to w.name, w %>
-    <br>
-    <% end %>
-  <% end %>
+      <b>Latest Workshops</b>
+      <br>
 
+      <% @workshops.each do |w| %>
+        <% if w.eventclass == "Workshop" %>
+        <%= link_to w.name, w %>
+        <br>
+        <% end %>
+      <% end %>
+
+    </div>
+
+    <div id="right_col">
+
+      <b>Latest Projects</b>
+      <br>
+
+      <% @workshops.each do |w| %>
+        <% if w.eventclass == "Project" %>
+        <%= link_to w.name, w %>
+        <br>
+        <% end %>
+      <% end %>
+
+    </div>
 </div>
 
-<br>
 
-<div id = "workshops">
 
-  <b>Latest Workshops</b>
-  <br>
 
-  <% @workshops.each do |w| %>
-    <% if w.eventclass == "Workshop" %>
-    <%= link_to w.name, w %>
-    <br>
-    <% end %>
-  <% end %>
 
-</div>
+
 
 </center>

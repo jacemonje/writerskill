@@ -3,12 +3,12 @@
 <center>
 
 <p>
-
+  <h2>
   <b> <%= @event.name %> </b>  by <b> <%= @event.organized_by %> </b>
-
+</h2>
   <br>
 
-  <b> <%= @event.venue %></b> on </b><%= @event.schedule %></b>
+  <b> <%= @event.venue %></b> on </b><%= @event.schedule.strftime("%A %M /%D /%Y") %></b>
 
   <br>
 
@@ -18,30 +18,33 @@
 
   Attendance: <b><%= @event.attendance %></b>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-  <div>
 
     <% if member_signed_in? %>
       <%=  button_to 'Register', :controller => "events", :action => "attend" %>
     <% else %>
 
       <%= form_for(:login_params, url: attend_path) do |f| %>
-        ID Number<br>
+        <h3>ID Number</h3>
+        <br>
         <%= f.text_field :idnumber %>
-        Email<br><br><br>
+        <br>
+        <h3>Email</h3>
+        <br>
         <%= f.text_field :email %>
+        <br>
         <br>
         <%= f.submit 'Register' %>
 
       <% end %>
     <% end %>
-
-
-  </div>
-
-  Attendees:
-
-
 
 </p>
 

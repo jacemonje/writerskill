@@ -1,4 +1,6 @@
 ActiveAdmin.register Member do
+  active_admin_import
+
   permit_params  :idnumber,
   :firstname,
   :middleinitial,
